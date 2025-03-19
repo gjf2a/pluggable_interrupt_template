@@ -7,14 +7,12 @@ use pluggable_interrupt_os::vga_buffer::{
 };
 
 use core::{
-    clone::Clone,
-    cmp::{min, Eq, PartialEq},
+    cmp::min,
     iter::Iterator,
-    marker::Copy,
     prelude::rust_2024::derive,
 };
 
-#[derive(Copy, Clone, Eq, PartialEq)]
+#[derive(Copy, Clone)]
 pub struct LetterMover {
     letters: [char; BUFFER_WIDTH],
     num_letters: usize,
